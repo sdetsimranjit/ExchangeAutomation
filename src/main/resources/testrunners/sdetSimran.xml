@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name = "My Regression" verbose="4" >
+<listeners>
+    <listener class-name="ant.qa.tradecrypto.Listners.ExtentReportListener"/>
+<!--    <listener class-name="ant.qa.tradecrypto.Listners.TestAllureListener"/>-->
+    <listener class-name="ant.qa.tradecrypto.Listners.AnnotationTransformer"/>
+</listeners>
+    <test name="registerPage">
+<!--        <parameter name="browser" value="chrome"/>-->
+        <classes>
+            <class name = "ant.qa.tradecrypto.tests.userSide.RegisterPageTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="loginPage">
+<!--        <parameter name="browser" value="firefox"/>-->
+        <classes>
+            <class name = "ant.qa.tradecrypto.tests.userSide.LoginPageTest">
+            </class>
+        </classes>
+    </test>
+    <test name="KYC">
+        <classes>
+            <class name = "ant.qa.tradecrypto.tests.userSide.KYCPageTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Approve KYC">
+        <classes>
+            <class name = "ant.qa.tradecrypto.tests.Admin.AdminKYCTest">
+            </class>
+        </classes>
+    </test>
+
+    <test name="Do Deposit Withdraw">
+        <classes>
+            <class name = "ant.qa.tradecrypto.tests.userSide.WalletPageTest">
+            </class>
+        </classes>
+    </test>
+
+
+
+
+
+
+
+</suite>
